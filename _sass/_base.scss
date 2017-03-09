@@ -23,12 +23,21 @@ body {
     -o-font-feature-settings: "kern" 1;
     font-feature-settings: "kern" 1;
     font-kerning: normal;
+    overflow-x: hidden;
+}
+
+h1 {
+    font-size: 80px;
+    color: $dark-orange;    
 }
 
 h2 {
     font-size: 50px;
 }
 
+h3 {
+    font-size: 30px;
+}
 
 /**
  * Set `margin-bottom` to maintain vertical rhythm
@@ -207,3 +216,34 @@ pre {
         }
     }
 }
+
+/* Buttons */
+
+.btn {
+    background: $button-background;
+    border: 1px solid $button-border;
+    border-radius: 25px;
+    padding: $spacing-unit / 4;
+    cursor: pointer;
+    font-size: 0.75rem;
+    transition: 0.2s ease-in;
+
+    &:hover {
+        color: $dark-orange;
+        font-weight: bold;
+        transition: 0.2s ease-out;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

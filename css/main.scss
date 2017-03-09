@@ -14,7 +14,7 @@ $base-line-height: 1.5;
 $spacing-unit:     30px;
 
 $text-color:       #111;
-$background-color: #fdfdfd;
+$background-color: #d3eef7;
 $brand-color:      #2a7ae2;
 
 $grey-background: #F3F3F3;
@@ -33,6 +33,9 @@ $green : rgb(60, 124, 92);
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
+
+$button-background: #FFFFFF;
+$button-border: $dark-orange;
 
 // Width of the content area
 $content-width:    800px;

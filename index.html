@@ -5,9 +5,52 @@ layout: default
 <div class="home">
   <div class="page-right"></div>
   <div class="page-right-text">
-    <h3>Read enough?</h3>
-    <h3><a href="/contact">Get in Touch</a></h3>
+    <h4>Read enough?</h4>
+    <button id="myBtn" class="btn">Get in Touch</button>
+    <div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>Send me a message...</h3>
+      <form class="contact-form" action="https://formspree.io/kieran.summerfeldt@gmail.com" method="POST">
+        <div class="form-group">
+          <label for="InputName1">Your Name</label>
+          <input type="text" class="form-control" id="exampleInputName1" name="name">
+        </div>
+        <div class="form-group">
+          <label for="InputEmail1">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" name="email">
+        </div>
+        <div class="form-group">
+          <label for="InputSubject1">Subject</label>
+          <input type="text" class="form-control" id="exampleInputSubject1" name="subject">
+        </div>
+        <!-- <input type="hidden" name="_next" value="/contact" /> -->
+        <div class="form-group">
+          <label for="message1">Message</label>
+          <textarea class="form-control" id="message1" rows="6" name="message"></textarea>
+        </div>
+        <div class="btn-container"> 
+          <button type="submit" class="btn">Submit</button>
+        </div>
+      </form>
+    </div>
   </div>
+  </div>
+  <div class="sun">
+    <div class="ray_box">
+        <div class="ray ray1"></div>
+        <div class="ray ray2"></div>
+        <div class="ray ray3"></div>
+        <div class="ray ray4"></div>
+        <div class="ray ray5"></div>
+        <div class="ray ray6"></div>
+        <div class="ray ray7"></div>
+        <div class="ray ray8"></div>
+        <div class="ray ray9"></div>
+        <div class="ray ray10"></div>
+    </div>
+</div>
   <h1 class="page-header"><!-- <span class="grow1">g</span><span class="grow2">r</span><span class="grow3">o</span><span class="grow4">w</span> <span class="grow5">y</span><span class="grow6">o</span><span class="grow7">u</span><span class="grow8">r</span>  --><span class="grow9">Grow your business.</span></h1>  
 
   <div class="information">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto</div>
@@ -15,15 +58,15 @@ layout: default
   <div id="container">
     <div id="stem1" class="stem">
       <div>
-        <div class="leaf" style="left: 570px; width: 70px"></div>
-        <div class="leaf" style="left: 420px; width: 50px; -webkit-transform: rotateY(180deg) rotate(90deg)"></div> 
+        <div class="leaf blown" style="left: 570px; width: 70px"></div>
+        <div class="leaf blown" style="left: 420px; width: 50px; -webkit-transform: rotateY(180deg) rotate(90deg)"></div> 
       </div>
     </div>
     <div id="stem2" class="stem">
       <div>
-        <div class="leaf" style="left: 280px; width: 70px; -webkit-transform: rotateY(-218deg) rotate(40deg); top: 22px"></div>
-        <div class="leaf" style="width: 31px;  left: 207px;  -webkit-transform: rotateY(-180deg) rotate(81deg);  top: 17px; height: 56px;"></div>
-        <div class="leaf" style="left: 373px;  top: 90px;  width: 44px; -webkit-transform: rotateY(20deg) rotate(79deg);"></div>
+        <div class="leaf blown" style="left: 280px; width: 70px; -webkit-transform: rotateY(-218deg) rotate(40deg); top: 22px"></div>
+        <div class="leaf blown" style="width: 31px;  left: 207px;  -webkit-transform: rotateY(-180deg) rotate(81deg);  top: 17px; height: 56px;"></div>
+        <div class="leaf blown" style="left: 373px;  top: 90px;  width: 44px; -webkit-transform: rotateY(20deg) rotate(79deg);"></div>
       </div>
     </div>
     <div id="stem3" class="stem">
@@ -33,7 +76,7 @@ layout: default
     </div>
     <div id="stem4" class="stem">
       <div>
-        <div class="leaf" style="left: 400px; width: 60px;"></div>
+        <div class="leaf blown" style="left: 400px; width: 60px;"></div>
         <div class="leaf" style="-webkit-transform: rotateY(-180deg) rotate(51deg);  left: 88px;  width: 23px;  height: 23px;"></div>
       </div>
     </div>
