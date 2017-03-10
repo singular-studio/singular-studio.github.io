@@ -24,7 +24,7 @@
     top: -300px;
     transform: rotate(45deg);
     box-shadow: 0 2px 12px #8e8e8e;
-    z-index: 10;
+    z-index: 100;
 }
 
 .page-right-text {
@@ -276,11 +276,60 @@
         line-height: 30px;
     }
 
-    & .method {
-        background: $dark-orange;
-        padding: $spacing-unit * 2;
-        color: white;
+    & .call-to-action {
+        padding: 120px;
         text-align: center;
+        color: white;
+        font-size: 1.5rem;
+        background: #777777;
+    }
+
+    & .method-container {
+      background: #FFFFFF;
+    }
+
+    & .method {
+        padding: $spacing-unit * 2 $spacing-unit * 5;
+        text-align: center;
+        transition: 0.2s;
+
+        &:nth-child(odd) {
+          transform: translateX(1200px);
+        }
+
+        &:nth-child(even) {
+          transform: translateX(-1200px)
+        }
+
+        &.idea {
+          padding-top: $spacing-unit * 7;
+
+          &.visible {
+            transform: translateX(0);
+            transition: 0.2s;
+          }
+        }
+
+        &.discussion.visible {
+          transform: translateX(0);
+          transition: 0.2s;
+        }
+
+
+        &.mockup.visible {
+          transform: translateX(0);
+          transition: 0.2s;
+        }
+
+        &.website.visible {
+          transform: translateX(0);
+          transition: 0.2s;
+        }
+
+
+        &.website {
+          padding-bottom: $spacing-unit * 5;
+        }
     }
 
 }
@@ -731,7 +780,7 @@
   box-shadow: inset 0px 0px 20px black;
   border-radius: 50%;
   left: 160px;
-  z-index: 10;
+  z-index: 12;
 }
 
 #flower {
@@ -833,46 +882,6 @@
     transform: scale(1.75);
   }
 }
-
-/* Growing title */
-
-.megaphone {
-    transform: rotate(45deg);
-    top: 80px;
-}
-
-.grow1 {
-    font-size: 1.5rem;
-}
-
-.grow2 {
-    font-size: 1.75rem;
-}
-
-.grow3 {
-    font-size: 2rem;
-}
-
-.grow4 {
-    font-size: 2.5rem;
-}
-
-.grow5 {
-    font-size: 3.5rem;
-}
-
-.grow6 {
-    font-size: 4rem;
-}
-
-.grow7 {
-    font-size: 5rem;
-}
-
-.grow8 {
-    font-size: 5rem;
-}
-
 
 
 /* Sun effect */
@@ -1009,25 +1018,18 @@
 .modal-content {
     background-color: #fefefe;
     margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 600px;
-}
+    width: 500px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 0px 10px rgba(0,0,0,0.3);
 
-/* The Close Button */
-.close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    line-height: 20px;
-}
-
-.close:hover,
-.close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
+    & .modal-title {
+      padding: 7px;
+      background: #545454;
+      color: white;
+      box-shadow: inset 0px 1px 3px #3c3c3c;
+      text-align: left;
+      text-transform: none;
+    }
 }
 
 .contact-form {
@@ -1038,18 +1040,19 @@
     color: $grey-color;
     text-align: left;
     text-transform: initial;
+    font-size: 14px;
   }
   
   & input {
     width: 100%;
     line-height: 25px;
-    font-size: 1.25rem;
+    font-size: 0.9rem;
   }
 
   & textarea {
     width: 100%;
     border: 1px solid #dfdfdf;
-    font-size: 1.25rem;
+    font-size: 0.9rem;
   }
 
   & .btn-container {
@@ -1060,14 +1063,20 @@
 
 /* Scrolling */
 
+.method-bar {
+  position: relative;
+  background: #a06800;
+  color: white;
+  z-index: 10;
+}
+
 .method-list {
   display: block;
   position: absolute;
-  width: 200px;
-  height: 100%;
-  padding: $spacing-unit * 2;
+  width: 100%;
+  height: 85px;
   margin: 0;
-  background: white;
+  background: $dark-orange;
   top: 0;
 
   &.fixed {
@@ -1077,6 +1086,7 @@
   & .item {
     display: inline-block;
     padding: $spacing-unit $spacing-unit / 2 $spacing-unit 75px;
+    margin-left: $spacing-unit;
     opacity: 0;
     transition: 0.2s;
     background-repeat: no-repeat;

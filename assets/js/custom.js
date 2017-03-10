@@ -12,16 +12,15 @@ $(function() {
   // Get the button that opens the modal
   var btn = document.getElementById("myBtn");
 
-  // Get the <span> element that closes the modal
-  var span = document.getElementsByClassName("close")[0];
+  var cancel = document.getElementsByClassName("cancel")[0];
 
   // When the user clicks the button, open the modal 
   btn.onclick = function() {
       modal.style.display = "block";
   }
 
-  // When the user clicks on <span> (x), close the modal
-  span.onclick = function() {
+  // When the user clicks on cancel, close the modal
+  cancel.onclick = function() {
       modal.style.display = "none";
   }
 
@@ -40,26 +39,26 @@ $(function() {
   var methodContainer = $(".method-list");
 
   wrap.on("scroll", function(e) {
-    this.scrollTop > 450 ? firstItem(this) : idea.removeClass("visible");
+    this.scrollTop > 300 ? firstItem(this) : idea.removeClass("visible");
 
     function firstItem(object) {
       idea.addClass("visible");
-      object.scrollTop > 785 ? fixList(object) : methodContainer.removeClass("fixed");
+      object.scrollTop > 443 ? fixList(object) : methodContainer.removeClass("fixed");
     }
 
     function fixList(object) {
       methodContainer.addClass("fixed");
-      object.scrollTop > 820 ? secondItem(object) : discussion.removeClass("visible");
+      object.scrollTop > 650 ? secondItem(object) : discussion.removeClass("visible");
     }
 
     function secondItem(object) {
       discussion.addClass("visible");
-      object.scrollTop > 1200 ? thirdItem(object) : mockup.removeClass("visible");
+      object.scrollTop > 1000 ? thirdItem(object) : mockup.removeClass("visible");
     }
 
     function thirdItem(object) {
       mockup.addClass("visible");
-      object.scrollTop > 1400 ? fourthItem(object) : website.removeClass("visible");
+      object.scrollTop > 1300 ? fourthItem(object) : website.removeClass("visible");
     }
 
     function fourthItem(object) {

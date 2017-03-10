@@ -35,27 +35,27 @@
     <div id="myModal" class="modal">
     <!-- Modal content -->
     <div class="modal-content">
-      <span class="close">&times;</span>
-      <h3>Send me a message...</h3>
+      <h4 class="modal-title">Send me a message...</h4>
       <form class="contact-form" action="https://formspree.io/kieran.summerfeldt@gmail.com" method="POST">
         <div class="form-group">
           <label for="InputName1">Your Name</label>
-          <input type="text" class="form-control" id="exampleInputName1" name="name">
+          <input type="text" class="form-control" id="exampleInputName1" name="name" placeholder="ex: John Smith">
         </div>
         <div class="form-group">
           <label for="InputEmail1">Email address</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" name="email">
+          <input type="email" class="form-control" id="exampleInputEmail1" name="email" placeholder="ex: john@gmail.com">
         </div>
         <div class="form-group">
           <label for="InputSubject1">Subject</label>
-          <input type="text" class="form-control" id="exampleInputSubject1" name="subject">
+          <input type="text" class="form-control" id="exampleInputSubject1" name="subject" placeholder="ex: Website design">
         </div>
         <!-- <input type="hidden" name="_next" value="/contact" /> -->
         <div class="form-group">
           <label for="message1">Message</label>
-          <textarea class="form-control" id="message1" rows="6" name="message"></textarea>
+          <textarea class="form-control" id="message1" rows="6" name="message" placeholder="Your message"></textarea>
         </div>
         <div class="btn-container"> 
+          <button type="button" class="btn cancel">Cancel</button>
           <button type="submit" class="btn">Submit</button>
         </div>
       </form>
