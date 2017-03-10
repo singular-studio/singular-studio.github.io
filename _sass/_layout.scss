@@ -14,6 +14,29 @@
     }
 }
 
+
+.page-right {
+    height: 500px;
+    width: 500px;
+    background: whitesmoke;
+    position: absolute;
+    right: -300px;
+    top: -300px;
+    transform: rotate(45deg);
+    box-shadow: 0 2px 12px #8e8e8e;
+    z-index: 10;
+}
+
+.page-right-text {
+    position: absolute;
+    right: $spacing-unit;
+    top: $spacing-unit;
+    text-align: center;
+    text-transform: uppercase;
+    color: $dark-orange;
+    z-index: 100;
+}
+
 .site-title {
     display: block;
     color: white;
@@ -227,6 +250,7 @@
     bottom: 0;
     left: 200px;
     background: $background-color;
+    overflow: auto;
 
     & .page-header {
         color: $dark-orange;
@@ -259,26 +283,6 @@
         text-align: center;
     }
 
-    & .page-right {
-        height: 500px;
-        width: 500px;
-        background: whitesmoke;
-        position: absolute;
-        right: -300px;
-        top: -300px;
-        transform: rotate(45deg);
-        box-shadow: 0 2px 12px #8e8e8e;
-    }
-
-    & .page-right-text {
-        position: absolute;
-        right: $spacing-unit / 2;
-        top: $spacing-unit;
-        text-align: center;
-        text-transform: uppercase;
-        color: $dark-orange;
-        z-index: 100;
-    }
 }
 
 @keyframes dropTitle {
@@ -1054,10 +1058,71 @@
 }
 
 
+/* Scrolling */
 
+.method-list {
+  display: block;
+  position: absolute;
+  width: 200px;
+  height: 100%;
+  padding: $spacing-unit * 2;
+  margin: 0;
+  background: white;
+  top: 0;
 
+  &.fixed {
+    position: fixed;
+  }
 
+  & .item {
+    display: inline-block;
+    padding: $spacing-unit $spacing-unit / 2 $spacing-unit 75px;
+    opacity: 0;
+    transition: 0.2s;
+    background-repeat: no-repeat;
+    background-size: 60px;
+    background-position: left center;
 
+    &.visible {
+      opacity: 1;
+      transition: 0.2s;
+    }
+
+    &.idea { 
+      background-image: url('/assets/img/lightbulb.png');
+    }
+
+    &.discussion { 
+      background-image: url('/assets/img/chat.png');
+    }
+
+    &.mockup { 
+      background-image: url('/assets/img/pencil.png');
+    }
+
+    &.website { 
+      background-image: url('/assets/img/web-page.png');
+      animation-name: pulse_animation;
+      animation-duration: 5000ms;
+      transform-origin:70% 70%;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+
+  }
+}
+
+@keyframes pulse_animation {
+  0% { transform: scale(1); }
+  20% { transform: scale(1.05); }
+  30% { transform: scale(1.1); }
+  40% { transform: scale(1.05); }
+  50% { transform: scale(1); }
+  60% { transform: scale(1.05); }
+  70% { transform: scale(1.1); }
+  80% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
 
 
 
