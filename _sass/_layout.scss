@@ -1,3 +1,24 @@
+// breakpoints
+   
+$S:     480px;   
+$M:     768px;     
+$L:     1050px;     
+
+// media queries
+
+@mixin MQ($canvas) {
+  @if $canvas == S {
+   @media only screen and (min-width: $S) { @content; } 
+  }
+  @else if $canvas == M {
+   @media only screen and (min-width: $M) { @content; } 
+  }
+  @else if $canvas == L {
+   @media only screen and (min-width: $L) { @content; } 
+  }
+}
+
+
 /**
  * Site header
  */
@@ -10,7 +31,7 @@
         padding-left: $spacing-unit / 4;
         padding-right: $spacing-unit / 4;
         background: $grey-background;
-        height: 100%;
+        height: 100vh;
     }
 }
 
@@ -18,8 +39,8 @@
 .page-right {
     height: 500px;
     width: 500px;
-    background: whitesmoke;
-    position: absolute;
+    background: $grey-background;
+    position: fixed;
     right: -300px;
     top: -300px;
     transform: rotate(45deg);
@@ -28,9 +49,9 @@
 }
 
 .page-right-text {
-    position: absolute;
-    right: $spacing-unit;
-    top: $spacing-unit;
+    position: fixed;
+    right: $spacing-unit / 2;
+    top: $spacing-unit / 2;
     text-align: center;
     text-transform: uppercase;
     color: $dark-orange;
@@ -244,18 +265,20 @@
 }
 
 .home {
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    left: 200px;
-    background: $background-color;
     overflow: auto;
 
+    & .first-screen {
+      background: url(/assets/img/fruit.jpg);
+      background-size: 100%;
+      width: auto;
+      height: 100%;
+    }
+
     & .page-header {
-        color: $dark-orange;
+        color: $light-orange;
         padding: 0 0 0 $spacing-unit;
-        position: relative;
+        text-align: center;
+        margin-top: 25vh;
     }
     
     & .table {
@@ -268,12 +291,15 @@
 
     & .information {
         padding: 0 30px;
-        color: grey;
-        font-size: 1.05rem;
-        width: 425px;
-        position: absolute;
+        color: white;
+        margin: auto;
+        width: 66%;
         font-weight: 200;
         line-height: 30px;
+        margin-bottom: 70px;
+        text-align: center;
+        margin-top: 30px;
+        font-size: 1rem;
     }
 
     & .call-to-action {
@@ -395,11 +421,25 @@
   position: absolute;
   left: 200px;
   padding: 0 $spacing-unit;
+  background: white;
+
+  & .title {
+    text-align: center;
+  }
 }
 
 #profile-img {
+  display: block;
   width: 250px;
   border-radius: 100%;
+  margin: auto;
+}
+
+/* Contact */
+
+.contact {
+  height: 100vh;
+  background: white;
 }
 
 /* Balloons */
@@ -889,14 +929,14 @@
 .sun { 
   position: absolute;
   top: 20px;
-  right: 300px;
+  right: 75px;
   bottom: 0;
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  background: yellow;
+  background: #f7f7dd;
   opacity: 0.9;
-  box-shadow: 0px 0px 40px 15px #fffab8;
+  box-shadow: 0px 0px 60px 43px #fffab8;
 }
 
 .ray_box {
@@ -1016,7 +1056,7 @@
 
 /* Modal Content */
 .modal-content {
-    background-color: #fefefe;
+    background-color: #FFFFFF;
     margin: auto;
     width: 500px;
     border-radius: 5px;
@@ -1065,7 +1105,6 @@
 
 .method-bar {
   position: relative;
-  background: #a06800;
   color: white;
   z-index: 10;
 }
@@ -1076,7 +1115,7 @@
   width: 100%;
   height: 85px;
   margin: 0;
-  background: $dark-orange;
+  background: $background-color;
   top: 0;
 
   &.fixed {
@@ -1092,6 +1131,11 @@
     background-repeat: no-repeat;
     background-size: 60px;
     background-position: left center;
+    font-size: 25px;
+    font-weight: bold;
+    color: #ffdda1;
+    text-shadow: 0px 2px 0px rgba(64, 63, 63, 0.5);
+    line-height: 25px;
 
     &.visible {
       opacity: 1;
@@ -1135,10 +1179,5 @@
 }
 
 
-
-
-
-
-
-
+/* About Scrolling demo */
 

@@ -5,10 +5,11 @@ permalink: /about/
 order: 2
 ---
 
+
 <div class="about">
-  <h1>Singular equals</h1>
+  <h1 class="title">Singular equals</h1>
   <img id="profile-img" src="/assets/img/profile.jpg" />
-  <h1>(Me)</h1>
+  <h1 class="title">(Me)</h1>
   <p>This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)</p>
 
   You can find the source code for the Jekyll new theme at:
